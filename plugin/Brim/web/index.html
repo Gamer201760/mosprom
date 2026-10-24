@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru" data-theme="dark" data-motion="fade">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Brim</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/index.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div id="app" class="app">
+    <aside id="sidebar" class="sidebar">
+      <div id="brand" class="sidebar-brand"></div>
+      <div class="sidebar-actions">
+        <button id="new-chat" class="button button-block" type="button"></button>
+        <button id="new-from-scene" class="button button-secondary button-compact button-block" type="button"></button>
+      </div>
+      <nav id="chat-list" class="chat-list"></nav>
+      <div class="sidebar-foot">
+        <button id="sidebar-toggle" class="icon-button sidebar-toggle" type="button" aria-controls="sidebar"><span data-icon="sidebar"></span></button>
+      </div>
+    </aside>
+    <div id="scrim" class="scrim" hidden></div>
+    <main class="main">
+      <header class="header">
+        <button id="menu" class="icon-button only-narrow" type="button"><span data-icon="menu"></span></button>
+        <div class="header-text">
+          <h1 id="title" class="header-title"></h1>
+          <div id="status" class="header-meta" role="status" aria-live="polite"></div>
+        </div>
+        <div id="mode" class="segmented"></div>
+        <button id="open-folder" class="icon-button" type="button"><span data-icon="folder"></span></button>
+        <button id="settings" class="icon-button" type="button"><span data-icon="settings"></span></button>
+      </header>
+      <div id="banner-slot" class="banner-slot" hidden><div id="banner" class="banner" role="alert"></div></div>
+      <section id="timeline" class="timeline" aria-live="polite">
+        <div id="empty" class="empty-state">
+          <span id="empty-mark"></span>
+          <h2 id="empty-title" class="empty-state-title"></h2>
+          <div id="suggestions" class="suggestions"></div>
+        </div>
+        <div id="entries" class="entries"></div>
+      </section>
+      <button id="jump" class="button button-secondary button-compact jump" type="button" hidden></button>
+      <div class="composer-wrap">
+        <div id="status-area" class="status-area"></div>
+        <form id="composer" class="composer">
+          <div id="attachments" class="chips"></div>
+          <textarea id="input" class="composer-input" rows="2"></textarea>
+          <div class="composer-bar">
+            <button id="attach" class="icon-button" type="button"><span data-icon="attach"></span></button>
+            <select id="skill" class="select"></select>
+            <span class="spacer"></span>
+            <button id="send" class="icon-button icon-button-primary" type="submit"><span data-icon="send"></span></button>
+            <button id="stop" class="icon-button icon-button-ring" type="button" hidden><span data-icon="stop"></span></button>
+          </div>
+          <input id="file" type="file" multiple hidden accept=".stl,.obj,.3mf,.jpg,.jpeg,.png,.docx,.xlsx,.csv,.tsv,.txt,.md,.json,.pdf">
+        </form>
+      </div>
+      <div id="drop" class="drop" hidden><div class="drop-box"><span data-icon="attach" data-size="lg"></span><span id="drop-text"></span></div></div>
+    </main>
+  </div>
+  <div id="settings-host" class="settings-host" hidden></div>
+  <div id="splash" class="splash" role="status"><span id="splash-mark"></span><p id="splash-text" class="splash-text"></p></div>
+</body>
+</html>

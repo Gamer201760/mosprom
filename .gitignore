@@ -1,0 +1,5 @@
+/*
+!/plugin/
+!/.gitignore
+__pycache__/
+/plugin/dist/
